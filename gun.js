@@ -765,8 +765,8 @@
 		(Gun.window||{}).console = (Gun.window||{}).console || {log: function(){}};
 		(C = console).only = function(i, s){ return (C.only.i && i === C.only.i && C.only.i++) && (C.log.apply(C, arguments) || s) };
 
-		;"Please do not remove welcome log unless you are paying for a monthly sponsorship, thanks!";
-		Gun.log.once("welcome", "Hello wonderful person! :) Thanks for using GUN, please ask for help on http://chat.gun.eco if anything takes you longer than 5min to figure out!");
+		// ;"Please do not remove welcome log unless you are paying for a monthly sponsorship, thanks!";
+		// Gun.log.once("welcome", "Hello wonderful person! :) Thanks for using GUN, please ask for help on http://chat.gun.eco if anything takes you longer than 5min to figure out!");
 	})(USE, './root');
 
 	;USE(function(module){
@@ -1399,7 +1399,7 @@
 		USE('./map');
 		USE('./set');
 		USE('./mesh');
-		USE('./websocket');
+		// USE('./websocket');
 		USE('./localStorage');
 		module.exports = Gun;
 	})(USE, './index');
@@ -1961,7 +1961,9 @@
 	  try{ module.exports = Mesh }catch(e){}
 
 	})(USE, './mesh');
-
+	
+	/*
+	
 	;USE(function(module){
 		var Gun = USE('./root');
 		Gun.Mesh = USE('./mesh');
@@ -2022,7 +2024,9 @@
 		});
 		var noop = function(){}, u;
 	})(USE, './websocket');
-
+	
+	*/
+	
 	;USE(function(module){
 		if(typeof Gun === 'undefined'){ return }
 
